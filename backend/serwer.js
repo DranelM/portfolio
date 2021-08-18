@@ -1,5 +1,6 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
+
 var pswd;
 try {
   pswd = require('./auth');
@@ -22,8 +23,8 @@ async function init() {
   const app = express();
 
   app.get('/express_backend/projects', async (req, res) => {
-    const db = await client.db('portfolio_web');
-    const collection = await db.collection('projects');
+    const db = client.db('portfolio_web');
+    const collection = db.collection('projects');
     const projects = await collection.find({}).toArray();
 
     res.json({ status: 'ok', projects });

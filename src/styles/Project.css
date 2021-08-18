@@ -1,0 +1,27 @@
+.project {
+  flex: 20%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.title {
+  margin: 2%;
+}
+
+.projectImage {
+  width: 100%;
+}
+
+.desc {
+  text-align: justify;
+  padding-top: 2%;
+}
+
+.stack {
+  align-self: flex-start;
+  margin: 0;
+  padding: 0 0 0 30px;
+}

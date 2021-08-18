@@ -1,0 +1,8 @@
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid black;
+  gap: 2%;
+}

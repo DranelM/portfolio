@@ -1,38 +1,19 @@
-import { useEffect, useState } from 'react';
+import AboutMe from './AboutMe';
+import Footer from './Footer';
+import Portray from './Portray';
+import Projects from './Projects';
+import Skills from './Skills';
 
 const App = () => {
-  const [projectsList, setProjectsList] = useState([]);
-
-  useEffect(() => {
-    async function getProjects() {
-      const results = await fetch('/express_backend/projects');
-      const json = await results.json();
-
-      setProjectsList(json.projects);
-    }
-
-    getProjects();
-  }, []);
-
   return (
     <div className="app">
-      {projectsList.map((project) => (
-        <div className="project">
-          <div className="title">{project.title}</div>
-          <div className="desc">{project.desc}</div>
-          <ul>
-            {project.stack.map((tech) => (
-              <li>{tech}</li>
-            ))}
-          </ul>
-          <img
-            className="projectImage"
-            src={project.image_url}
-            alt={project.title}
-            width="30%"
-          ></img>
-        </div>
-      ))}
+      <Portray />
+      <div className="wrapper">
+        <Projects />
+        <Skills />
+        <AboutMe />
+      </div>
+      <Footer />
     </div>
   );
 };
