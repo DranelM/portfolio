@@ -3,11 +3,20 @@
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  border: 1px solid hsl(210, 60%, 90%);
-  background: hsl(210, 60%, 96%);
+  /* background: linear-gradient(hsl(210, 60%, 96%), white); */
+
+  box-shadow: 0 8px 12px rgb(0 0 0 / 25%);
+  border-radius: 1rem;
+}
+
+/* .project {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: linear-gradient(to right, hsl(210, 60%, 96%), white);
+
   box-shadow: 0 8px 12px rgb(0 0 0 / 25%);
   border-radius: 1rem 0;
-}
+} */
 
 .project:hover {
   transform: scale(103%);
@@ -15,21 +24,29 @@
   box-shadow: 0 12px 12px rgb(0 0 0 / 25%);
 }
 
-.project:hover .projectImage {
-  transition: all 0.2s ease-in-out;
-  filter: grayscale(0%);
-}
-
 .project:not(:hover) {
   transition: all 0.2s ease-in-out;
 }
 
+.project:hover .projectImage,
 .project:not(hover) .projectImage {
   transition: all 0.2s ease-in-out;
 }
 
+.project:hover .projectImage {
+  filter: grayscale(0%) drop-shadow(0 4px 1px rgba(0, 0, 0, 10%));
+}
+
+.project:not(hover) .stackImage,
+.project:hover .stackImage {
+  transition: all 0.2s ease-in-out;
+}
+
+.project:hover .stackImage {
+  filter: grayscale(0%);
+}
+
 .topProjectSector {
-  background: hsl(210, 60%, 90%);
   border-radius: 1rem 0;
   padding-bottom: 1rem;
 }
@@ -38,17 +55,18 @@
   width: 100%;
   font-size: 21px;
   text-align: center;
-  margin: 2%;
+  padding: 2% 0;
+  border-radius: 1rem 1rem 0 0;
+  background: #2f8ae4;
+  color: white;
 }
 
-.projectImage,
 .projectDesc,
 .projectStack {
   padding: 0 10px;
 }
 
 .projectImage {
-  border-radius: 2rem;
   width: 100%;
   max-width: 300px;
   filter: grayscale(100%);
@@ -56,20 +74,25 @@
 
 .projectDesc {
   text-align: justify;
+  margin: 0 0.5rem 1rem 0.5rem;
   padding-top: 2%;
 }
 
 .projectStack {
-  align-self: flex-start;
-  margin: 0;
-  padding: 1rem 0 0 25px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+  padding: 0.5rem;
 }
 
-@media (min-width: 640px) {
+.projectStack li {
+  list-style: none;
 }
 
-@media (min-width: 768px) {
-}
-
-@media (min-width: 1024px) {
+.stackImage {
+  width: var(--icon-size);
+  filter: grayscale(100%);
 }

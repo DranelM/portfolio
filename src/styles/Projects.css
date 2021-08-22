@@ -12,8 +12,13 @@
 }
 
 .projects {
+  /* display: flex;
+  flex-flow: row wrap; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  gap: 1rem;
+  /* grid-template-rows: 1fr;
+  grid-template-columns: 3fr; */
+
+  gap: 1.5rem;
 }

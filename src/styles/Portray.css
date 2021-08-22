@@ -132,10 +132,6 @@
   .portray h2 {
     font-size: 25px;
   }
-
-  .meDesc {
-    font-size: 10px;
-  }
 }
 
 @media (max-width: 500px) {

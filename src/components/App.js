@@ -8,7 +8,6 @@ const App = () => {
       <Portray />
       <div className="wrapper">
         <Projects />
-        <Skills />
       </div>
     </div>
   );
