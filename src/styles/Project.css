@@ -1,33 +1,75 @@
 .project {
-  flex: 30%;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 500px;
+  border: 1px solid hsl(210, 60%, 90%);
+  background: hsl(210, 60%, 96%);
+  box-shadow: 0 8px 12px rgb(0 0 0 / 25%);
+  border-radius: 1rem 0;
 }
 
-.title {
+.project:hover {
+  transform: scale(103%);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 12px 12px rgb(0 0 0 / 25%);
+}
+
+.project:hover .projectImage {
+  transition: all 0.2s ease-in-out;
+  filter: grayscale(0%);
+}
+
+.project:not(:hover) {
+  transition: all 0.2s ease-in-out;
+}
+
+.project:not(hover) .projectImage {
+  transition: all 0.2s ease-in-out;
+}
+
+.topProjectSector {
+  background: hsl(210, 60%, 90%);
+  border-radius: 1rem 0;
+  padding-bottom: 1rem;
+}
+
+.projectTitle {
+  width: 100%;
+  font-size: 21px;
+  text-align: center;
   margin: 2%;
 }
 
+.projectImage,
+.projectDesc,
+.projectStack {
+  padding: 0 10px;
+}
+
 .projectImage {
-  border-radius: 5px;
+  border-radius: 2rem;
   width: 100%;
   max-width: 300px;
+  filter: grayscale(100%);
 }
 
-.desc {
+.projectDesc {
   text-align: justify;
   padding-top: 2%;
-  height: 40%;
 }
 
-.stack {
+.projectStack {
   align-self: flex-start;
   margin: 0;
-  padding: 0 0 0 25px;
+  padding: 1rem 0 0 25px;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
 }

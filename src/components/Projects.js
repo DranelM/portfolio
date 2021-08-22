@@ -16,16 +16,14 @@ const Projects = () => {
   }, []);
 
   return (
-    <>
-      <label className="projectsLabel">
-        Projects
-        <div className="projects">
-          {projectsList.map((project) => (
-            <Project data={project} key={project._id} />
-          ))}
-        </div>
-      </label>
-    </>
+    <div className="projectsWrapper">
+      <h1 className="projectsLabel">Projects</h1>
+      <div className="projects">
+        {projectsList.map((project) => (
+          <Project data={project} key={project._id} />
+        ))}
+      </div>
+    </div>
   );
 };
 

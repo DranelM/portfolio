@@ -19,13 +19,8 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  flex: 0 1 768px;
+  flex: 0 1 1024px;
   height: var(--portray-height);
-}
-
-.portray h1,
-.portray h2 {
-  font-size: 35px;
 }
 
 .portray h1 {
@@ -100,7 +95,7 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 830px) {
   .myPicture {
     display: none;
   }
@@ -115,8 +110,7 @@
   }
 
   .me {
-    justify-content: center;
-    align-items: center;
+    margin: 0 20%;
   }
 
   .meDesc {
@@ -133,20 +127,19 @@
   }
 }
 
-@media (min-width: 640px) {
-  .portray {
-    flex: 0 1 640px;
+@media (max-width: 600px) {
+  .portray h1,
+  .portray h2 {
+    font-size: 25px;
+  }
+
+  .meDesc {
+    font-size: 10px;
   }
 }
 
-@media (min-width: 768px) {
-  .portray {
-    flex: 0 1 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .portray {
-    flex: 0 1 1024px;
+@media (max-width: 500px) {
+  .me {
+    margin: 0 10%;
   }
 }

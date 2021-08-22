@@ -1,9 +1,19 @@
-.projects {
+.projectsWrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
-  align-items: flex-start;
-  /* border: 1px solid black; */
-  gap: 2%;
-  margin-bottom: 5%;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.projectsLabel {
+  font-weight: 100;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
 }
