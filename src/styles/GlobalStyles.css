@@ -4,13 +4,6 @@
   margin: 0;
 }
 
-.app {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrapper {
-  max-width: 800px;
+body {
+  font-family: 'Poppins';
 }

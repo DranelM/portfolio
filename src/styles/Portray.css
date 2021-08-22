@@ -1,7 +1,152 @@
-.portray {
+:root {
+  --portray-height: 36rem;
+  --icon-size: 25px;
+  --mypicture-offset: 3rem;
+}
+
+.portrayWrapper {
   display: flex;
-  flex-flow: column;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  background-color: #eff5fb;
+  box-shadow: 0 8px 12px rgb(0 0 0 / 25%);
+  width: 100%;
+}
+
+.portray {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 768px;
+  height: var(--portray-height);
+}
+
+.portray h1,
+.portray h2 {
+  font-size: 35px;
+}
+
+.portray h1 {
+  line-height: 82%;
+  font-family: 'Poppins';
+  color: #2f8ae4;
+  font-weight: 200;
+}
+
+.portray h2 {
+  color: #0c1115;
+}
+
+.me {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin-left: 4rem;
+}
+
+.meDesc {
+  font-size: 14px;
+  text-align: justify;
+  color: #4d4e4e;
+}
+
+.myPicture {
+  max-height: calc(var(--portray-height) - var(--mypicture-offset));
+  transform: translateY(calc(var(--mypicture-offset) / 2));
+}
+
+.socialMedia {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10%;
+  margin-top: 1%;
+}
+
+.socialIcon {
+  transition: all 0.2s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(110%);
+}
+
+.linkedin {
+  background: url('../assets/in_circle.png');
+  background-size: cover;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.github {
+  background: url('../assets/gh_circle.png');
+  background-size: cover;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.linkedin:hover {
+  background: url('../assets/in_circle_blue.png');
+  background-size: cover;
+}
+
+.github:hover {
+  background: url('../assets/gh_circle_blue.png');
+  background-size: cover;
+}
+
+@media screen and (max-width: 700px) {
+  .myPicture {
+    display: none;
+  }
+
+  .portray h1 {
+    text-align: justify;
+  }
+
+  .portray h1,
+  .portray h2 {
+    font-size: 30px;
+  }
+
+  .me {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .meDesc {
+    text-align: justify;
+    font-size: 12px;
+  }
+
+  .portray {
+    text-align: center;
+  }
+
+  .socialMedia {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .portray {
+    flex: 0 1 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portray {
+    flex: 0 1 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portray {
+    flex: 0 1 1024px;
+  }
 }

@@ -1,4 +1,5 @@
 import "./AboutMe.css"
+import "./App.css"
 import "./Footer.css"
 import "./GlobalStyles.css"
 import "./Portray.css"

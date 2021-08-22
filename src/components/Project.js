@@ -2,12 +2,13 @@ const Project = ({ data }) => {
   return (
     <div className="project">
       <div className="title">{data.title}</div>
-      <img
-        className="projectImage"
-        src={data.image_url}
-        alt={data.title}
-        width="30%"
-      ></img>
+      <a href={data.url}>
+        <img
+          className="projectImage"
+          src={data.image_url}
+          alt={data.title}
+        ></img>
+      </a>
       <div className="desc">{data.desc}</div>
       <ul className="stack">
         {data.stack.map((tech) => (

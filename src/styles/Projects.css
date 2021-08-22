@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   gap: 2%;
+  margin-bottom: 5%;
 }
