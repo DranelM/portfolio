@@ -14,7 +14,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "setAllStyles": "node src/styles/setAllStyles.mjs",
+    "setAllStyles": "node src/utils/setAllStyles.mjs",
     "start": "npm run setAllStyles & react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

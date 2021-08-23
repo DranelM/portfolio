@@ -26,7 +26,7 @@ const Portray = () => {
           </span>
           <div className="socialMedia">
             {Object.entries(links).map(([name, v]) => (
-              <a href={v.link}>
+              <a href={v.link} key={name}>
                 <div className={`socialIcon ${name}`} alt={name}></div>
               </a>
             ))}

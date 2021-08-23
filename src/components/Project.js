@@ -1,27 +1,10 @@
-import jsImage from '../assets/js.png';
-import cssImage from '../assets/css.png';
-import htmlImage from '../assets/html.png';
-import nodeImage from '../assets/node.png';
-import tsImage from '../assets/ts.png';
-import reactImage from '../assets/react.png';
-import jestImage from '../assets/jest.png';
-
-const techImages = {
-  js: jsImage,
-  css: cssImage,
-  html: htmlImage,
-  node: nodeImage,
-  typescript: tsImage,
-  react: reactImage,
-  jest: jestImage,
-};
+import techImages from '../utils/techIcons';
 
 const Project = ({ data }) => {
   return (
-    <div className="project">
-      <sector className="topProjectSector">
-        <div className="projectTitle">{data.title}</div>
-
+    <div className="projectWrapper">
+      <div className="projectTitle">{data.title}</div>
+      <div className="project">
         <a href={data.url}>
           <img
             className="projectImage"
@@ -29,21 +12,20 @@ const Project = ({ data }) => {
             alt={data.title}
           ></img>
         </a>
-      </sector>
+        <ul className="projectStack">
+          {data.stack.map((tech) => (
+            <li key={tech}>
+              <img
+                className="stackImage"
+                src={techImages[tech.toLowerCase()].img}
+                alt={tech}
+              ></img>
+            </li>
+          ))}
+        </ul>
 
-      <ul className="projectStack">
-        {data.stack.map((tech) => (
-          <li key={tech}>
-            <img
-              className="stackImage"
-              src={techImages[tech.toLowerCase()]}
-              alt={tech}
-            ></img>
-          </li>
-        ))}
-      </ul>
-
-      <div className="projectDesc">{data.desc}</div>
+        <div className="projectDesc">{data.desc}</div>
+      </div>
     </div>
   );
 };

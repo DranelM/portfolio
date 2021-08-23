@@ -96,6 +96,10 @@
 }
 
 @media screen and (max-width: 830px) {
+  :root {
+    --portray-height: 30rem;
+  }
+
   .myPicture {
     display: none;
   }
@@ -121,13 +125,13 @@
   .portray {
     text-align: center;
   }
-
-  .socialMedia {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 600px) {
+  :root {
+    --portray-height: 25rem;
+  }
+
   .portray h1,
   .portray h2 {
     font-size: 25px;

@@ -1,13 +1,20 @@
-import skillsImage from '../assets/skills.png';
+import techIcons from '../utils/techIcons';
 
 const Skills = () => {
   return (
-    <label className="skillsLabel">
-      Skills
+    <div className="skillsWrapper">
+      <h2 className="skillsLabel">Skills list</h2>
       <div className="skills">
-        <img className="skillsImage" src={skillsImage} alt="skills"></img>
+        {Object.entries(techIcons).map(([techName, icon]) => (
+          <img
+            key={techName}
+            src={icon.img}
+            alt={techName}
+            className={`skillIcon ${icon.level}`}
+          ></img>
+        ))}
       </div>
-    </label>
+    </div>
   );
 };
 
