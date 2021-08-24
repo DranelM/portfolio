@@ -7,9 +7,14 @@
 }
 
 .projectsLabel {
+  text-align: center;
   font-weight: 100;
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.projectsLabel span {
+  color: #2f8ae4;
 }
 
 .projects {
