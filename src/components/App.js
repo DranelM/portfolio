@@ -1,6 +1,5 @@
 import Portray from './Portray';
 import Projects from './Projects';
-// import Skills from './Skills';
 import Footer from './Footer';
 
 const App = () => {
