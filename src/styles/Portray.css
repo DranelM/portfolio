@@ -44,9 +44,9 @@
 }
 
 .meDesc {
-  font-size: 14px;
+  font-size: var(--descfont-size);
+  color: var(--descfont-color);
   text-align: justify;
-  color: #4d4e4e;
 }
 
 .myPicture {
@@ -108,18 +108,12 @@
     text-align: justify;
   }
 
-  .portray h1,
-  .portray h2 {
-    font-size: 30px;
-  }
-
   .me {
-    margin: 0 20%;
+    margin: 0 10%;
   }
 
   .meDesc {
     text-align: justify;
-    font-size: 12px;
   }
 
   .portray {
@@ -130,11 +124,6 @@
 @media (max-width: 600px) {
   :root {
     --portray-height: 25rem;
-  }
-
-  .portray h1,
-  .portray h2 {
-    font-size: 25px;
   }
 }
 

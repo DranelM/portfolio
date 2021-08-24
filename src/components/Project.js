@@ -3,7 +3,9 @@ import techImages from '../utils/techIcons';
 const Project = ({ data }) => {
   return (
     <div className="projectWrapper">
-      <div className="projectTitle">{data.title}</div>
+      <div className="projectTitle">
+        <a href={data.url}>{data.title}</a>
+      </div>
       <div className="project">
         <a href={data.url}>
           <img

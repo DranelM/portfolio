@@ -3,14 +3,13 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   margin-bottom: 3rem;
 }
 
 .projectsLabel {
   font-weight: 100;
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 50%);
+  margin-bottom: 2rem;
 }
 
 .projects {
@@ -29,7 +28,9 @@
   }
 
   .projectsLabel {
-    width: auto;
+    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
   }
 }
 

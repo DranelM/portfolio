@@ -12,3 +12,22 @@ h1,
 h2 {
   font-size: 35px;
 }
+
+:root {
+  --descfont-size: 14px;
+  --descfont-color: #4d4e4e;
+}
+
+@media screen and (max-width: 830px) {
+  h1,
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1,
+  h2 {
+    font-size: 25px;
+  }
+}
