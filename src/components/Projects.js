@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <div className="projectsWrapper">
-      {/* <h1 className="projectsLabel">Projects</h1> */}
+      <h1 className="projectsLabel">Check out my projects</h1>
       <div className="projects">
         {projectsList.map((project) => (
           <Project data={project} key={project._id} />

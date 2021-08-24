@@ -18,6 +18,7 @@ const Project = ({ data }) => {
               <img
                 className="stackImage"
                 src={techImages[tech.toLowerCase()].img}
+                title={tech}
                 alt={tech}
               ></img>
             </li>

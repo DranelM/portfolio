@@ -9,6 +9,8 @@
 
 .projectsLabel {
   font-weight: 100;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 50%);
 }
 
 .projects {
@@ -24,5 +26,15 @@
     flex-flow: column;
     align-items: center;
     gap: 1.5rem;
+  }
+
+  .projectsLabel {
+    width: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .projectsLabel {
+    font-size: 25px;
   }
 }

@@ -5,8 +5,8 @@ var styleFiles = [];
 
 readdirSync('src/styles').forEach((file) => {
   if (file.includes('.css')) {
-    styleFiles.push(`import "./${file}"\n`);
+    styleFiles.push(`import "../styles/${file}"\n`);
   }
 });
 
-await writeFile('src/styles/allStyles.js', styleFiles);
+await writeFile('src/utils/allStyles.js', styleFiles);
