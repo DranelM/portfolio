@@ -5,7 +5,6 @@ const ProjectsWrapper = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  margin: 0 2rem;
 `;
 
 const ProjectsLabel = styled.h1`
@@ -18,7 +17,7 @@ const ProjectsLabel = styled.h1`
     color: #2f8ae4;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     text-align: center;
     width: 80%;
     margin: 1rem auto;
@@ -35,7 +34,7 @@ const ProjectsMeat = styled.div`
   grid-template-rows: auto;
   gap: 1.5rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     display: flex;
     flex-flow: column;
     align-items: center;

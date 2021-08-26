@@ -5,7 +5,7 @@ export const ProjectImage = styled.img`
   max-width: 350px;
   filter: grayscale(100%);
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     border-radius: 0 0 0 1rem;
     height: 100%;
   }
@@ -69,7 +69,7 @@ export const ProjectWrapper = styled.div`
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     width: 80%;
   }
 `;
@@ -92,7 +92,7 @@ export const ProjectTitle = styled.div`
     color: white;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     padding: 0;
   }
 `;
@@ -110,7 +110,7 @@ export const ProjectStack = styled.ul`
     list-style: none;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     grid-column: 2/3;
     grid-row: 1/2;
     padding-top: 1rem;
@@ -125,7 +125,7 @@ export const ProjectDesc = styled.div`
   font-size: var(--descfont-size);
   color: var(--descfont-color);
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     grid-column: 2/3;
     grid-row: 2/3;
     padding: 0 0 15px 0;
@@ -145,7 +145,7 @@ export const ProjectDesc = styled.div`
 `;
 
 export const ProjectContent = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
