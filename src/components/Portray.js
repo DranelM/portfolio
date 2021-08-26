@@ -19,10 +19,10 @@ const Portray = () => {
             <h2>Frontend Developer</h2>
           </span>
           <span className="meDesc">
-            From startup co-founder wanna-be, through being data scientist to
-            frontend developer. Enchanted with the twisted JavaScript world, the
-            gonna-be wizard of what you can see and want to interact with.
-            Privately rather calm and empathic.
+            From startup co-founder wanna-be, through data scientist to frontend
+            developer. Enchanted with the twisted JavaScript world, the gonna-be
+            wizard of what you can see and want to interact with. Privately
+            rather calm and empathic.
           </span>
           <div className="socialMedia">
             {Object.entries(links).map(([name, v]) => (
