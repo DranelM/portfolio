@@ -5,6 +5,7 @@ const ProjectsWrapper = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  margin: 0 2rem;
 `;
 
 const ProjectsLabel = styled.h1`
