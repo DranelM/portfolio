@@ -1,16 +1,17 @@
 import Portray from './Portray';
 import Projects from './Projects';
 import Footer from './Footer';
+import * as Styled from '../styles/App.style';
 
 const App = () => {
   return (
-    <div className="app">
+    <Styled.App>
       <Portray />
-      <div className="wrapper">
+      <Styled.Wrapper>
         <Projects />
-      </div>
+      </Styled.Wrapper>
       <Footer />
-    </div>
+    </Styled.App>
   );
 };
 

@@ -1,35 +1,38 @@
+import {
+  ProjectContent,
+  ProjectDesc,
+  ProjectImage,
+  ProjectStack,
+  ProjectTitle,
+  ProjectWrapper,
+  StackImage,
+} from '../styles/Project.style';
 import techImages from '../utils/techIcons';
 
 const Project = ({ data }) => {
   return (
-    <div className="projectWrapper">
-      <div className="projectTitle">
+    <ProjectWrapper>
+      <ProjectTitle>
         <a href={data.url}>{data.title}</a>
-      </div>
-      <div className="project">
+      </ProjectTitle>
+      <ProjectContent>
         <a href={data.url}>
-          <img
-            className="projectImage"
-            src={data.image_url}
-            alt={data.title}
-          ></img>
+          <ProjectImage src={data.image_url} alt={data.title}></ProjectImage>
         </a>
-        <ul className="projectStack">
+        <ProjectStack>
           {data.stack.map((tech) => (
             <li key={tech}>
-              <img
-                className="stackImage"
+              <StackImage
                 src={techImages[tech.toLowerCase()].img}
                 title={tech}
                 alt={tech}
-              ></img>
+              ></StackImage>
             </li>
           ))}
-        </ul>
-
-        <div className="projectDesc">{data.desc}</div>
-      </div>
-    </div>
+        </ProjectStack>
+        <ProjectDesc>{data.desc}</ProjectDesc>
+      </ProjectContent>
+    </ProjectWrapper>
   );
 };
 

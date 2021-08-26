@@ -1,4 +1,9 @@
 import { useEffect, useState } from 'react';
+import {
+  ProjectsLabel,
+  ProjectsMeat,
+  ProjectsWrapper,
+} from '../styles/Projects.style';
 import Project from './Project';
 
 const Projects = () => {
@@ -16,16 +21,16 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="projectsWrapper">
-      <h1 className="projectsLabel">
+    <ProjectsWrapper>
+      <ProjectsLabel>
         Check out <span>my projects</span>
-      </h1>
-      <div className="projects">
+      </ProjectsLabel>
+      <ProjectsMeat>
         {projectsList.map((project) => (
           <Project data={project} key={project._id} />
         ))}
-      </div>
-    </div>
+      </ProjectsMeat>
+    </ProjectsWrapper>
   );
 };
 

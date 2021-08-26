@@ -1,5 +1,7 @@
+import * as Styled from '../styles/Footer.style';
+
 const Footer = () => {
-  return <div className="footer">© Maciej Lenard 2021</div>;
+  return <Styled.Footer>© Maciej Lenard 2021</Styled.Footer>;
 };
 
 export default Footer;
