@@ -1,5 +1,6 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
+const path = require('path');
 
 var pswd;
 try {
@@ -22,12 +23,18 @@ async function init() {
 
   const app = express();
 
+  app.use(express.static(path.join(__dirname, '../build')));
+
   app.get('/express_backend/projects', async (req, res) => {
     const db = client.db('portfolio_web');
     const collection = db.collection('projects');
     const projects = await collection.find({}).toArray();
 
     res.json({ status: 'ok', projects });
+  });
+
+  app.get('*', (req, res) => {
+    res.send(express.static(path.join(__dirname, '../build/index.html')));
   });
 
   app.listen(port, () => console.log(`Listening on port ${port}`));
