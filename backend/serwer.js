@@ -2,14 +2,12 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const path = require('path');
 
-var pswd;
+let uri;
 try {
-  pswd = require('./auth');
+  uri = process.env.MONGO_URL;
 } catch (ex) {
-  console.error('Authentication password file not detected');
+  console.error('MongoDB Url not found');
 }
-
-const uri = `mongodb+srv://portfolio_front:${pswd}@cluster0.rk2p0.mongodb.net/portfolio_web?retryWrites=true&w=majority`;
 
 const port = process.env.PORT || 5000;
 
